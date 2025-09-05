@@ -15,9 +15,11 @@
     --card-shadow: rgba(0,0,0,0.06);
   }
 
+
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
   body { font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+
 
   /* Navbar */
   header { position:fixed; top:0; width:100%; z-index:1000; background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); box-shadow:0 1px 6px rgba(0,0,0,0.08); }
@@ -27,31 +29,34 @@
   nav ul li a { text-decoration:none; color:var(--text); font-weight:600; font-size:0.95rem; transition:0.3s; }
   nav ul li a:hover { color:var(--primary); }
 
+
   /* Hero */
-  .hero { 
-    height:100vh; 
-    display:flex; 
-    flex-direction:column; 
-    justify-content:center; 
-    align-items:center; 
-    text-align:center; 
-    background:linear-gradient(180deg,var(--primary) 0%, #fff 100%); 
-    color:white; 
-    padding:0 20px; 
-    transition:background 0.5s ease, color 0.5s ease; 
+  .hero {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(180deg,var(--primary) 0%, #fff 100%);
+    color:white;
+    padding:0 20px;
+    transition:background 0.5s ease, color 0.5s ease;
   }
-  .hero.scrolled { 
-    background:linear-gradient(180deg,var(--primary) 0%, #fff 80%); 
-    color:var(--text); 
+  .hero.scrolled {
+    background:linear-gradient(180deg,var(--primary) 0%, #fff 80%);
+    color:var(--text);
   }
   .hero h2 { font-size:3rem; font-weight:800; margin-bottom:20px; max-width:800px; }
   .hero p { font-size:1.2rem; max-width:600px; margin-bottom:40px; opacity:0.9; }
   .hero button { background:white; color:var(--primary); border:none; padding:16px 40px; font-size:1.1rem; border-radius:12px; font-weight:600; cursor:pointer; transition:0.3s; }
   .hero button:hover { background:#f1f1f1; transform:translateY(-3px); }
 
+
   /* Section titles */
   section { padding:100px 20px; max-width:1200px; margin:0 auto; }
   h2 { text-align:center; margin-bottom:60px; font-size:2.2rem; font-weight:700; color:var(--secondary); }
+
 
   /* Services */
   .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:40px; }
@@ -60,10 +65,12 @@
   .service-card h3 { font-size:1.4rem; margin-bottom:15px; color:var(--primary); }
   .service-card p { font-size:1rem; color:#444; }
 
+
   /* Stats */
   .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; text-align:center; margin-top:60px; }
   .stat { font-size:2rem; font-weight:800; color:var(--primary); }
   .stat-label { font-size:1rem; color:var(--light-text); }
+
 
   /* CTA */
   .cta { background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; text-align:center; padding:80px 20px; border-radius:15px; margin:80px auto; max-width:900px; }
@@ -71,11 +78,13 @@
   .cta button { background:white; color:var(--primary); padding:15px 40px; border:none; border-radius:10px; font-size:1.2rem; font-weight:600; cursor:pointer; transition:0.3s; }
   .cta button:hover { background:#e0e0e0; transform:scale(1.05); }
 
+
   /* Contact */
   form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; }
   input, textarea { padding:15px; margin-bottom:20px; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
   button.submit-btn { background:var(--primary); color:white; padding:15px; border:none; border-radius:8px; font-size:1.1rem; font-weight:600; cursor:pointer; transition:0.3s; }
   button.submit-btn:hover { background:var(--secondary); }
+
 
   /* Footer */
   footer { background:#111; color:white; text-align:center; padding:50px 20px; margin-top:80px; font-size:0.9rem; }
@@ -84,9 +93,11 @@
   .footer-links a { color:#bbb; text-decoration:none; font-size:0.9rem; transition:0.3s; }
   .footer-links a:hover { color:white; }
 
+
   /* Animations */
   .fade-up { opacity:0; transform:translateY(50px); transition:0.8s ease; }
   .fade-up.visible { opacity:1; transform:translateY(0); }
+
 
   @media(max-width:768px){
     nav ul { flex-direction:column; margin-top:10px; gap:10px; }
@@ -95,9 +106,9 @@
 </head>
 <body>
 
+
 <header>
   <nav aria-label="Huvudnavigering">
-    <a href="#"><img src="logo.png" alt="Eskilstuna Bilglans Logo"></a>
     <ul>
       <li><a href="#services">Tjänster</a></li>
       <li><a href="#about">Om oss</a></li>
@@ -106,24 +117,27 @@
   </nav>
 </header>
 
+
 <section class="hero" id="hero">
   <h2>Din bil förtjänar premiumvård</h2>
   <p>Eskilstuna Bilglans erbjuder exklusiv bilvård med precision och kvalitet. Vi förvandlar din bil till ett mästerverk.</p>
   <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Boka tid</button>
 </section>
 
+
 <section id="services">
   <h2>Våra Tjänster</h2>
   <div class="services fade-up">
     <div class="service-card">
-      <h3>Lackskydd</h3>
-      <p>Högteknologiskt skydd som bevarar lackens glans och förhindrar skador från väder och smuts.</p>
+      <h3>Interiörtvätt</h3>
+      <p>Ge din bil en nybils­känsla med vår professionella interiörtvätt. Vi rengör säten, mattor och alla ytor för en fräschare och mer trivsam körupplevelse.</p>
     </div>
     <div class="service-card">
-      <h3>Tvätt</h3>
-      <p>Exklusiv tvätt både in- och utvändigt med premiumprodukter som garanterar skinande resultat.</p>
+      <h3>Exteriörtvätt</h3>
+      <p>Låt oss ta hand om bilens utsida med en skonsam men effektiv exteriörtvätt. Vi avlägsnar smuts och föroreningar och lämnar lacken skinande ren och välvårdad.</p>
     </div>
   </div>
+
 
   <div class="stats fade-up">
     <div>
@@ -137,21 +151,24 @@
   </div>
 </section>
 
+
 <section class="cta fade-up">
   <h3>Boka din exklusiva behandling idag</h3>
   <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Boka nu</button>
 </section>
 
+
 <section id="about">
   <h2>Om Oss</h2>
   <div class="about fade-up">
-    <p>På Eskilstuna Bilglans UF strävar vi efter att leverera bilvård med högsta kvalitet och noggrannhet. 
-    Vi är ett ungt och engagerat företag från Eskilstuna som kombinerar entreprenörskap med en passion för bilar. 
-    Vårt mål är att ge varje kund en professionell serviceupplevelse där bilen lämnas skinande ren och väl omhändertagen. 
-    Vi lägger stor vikt vid detaljer och ser till att varje tvätt utförs med omsorg. 
+    <p>På Eskilstuna Bilglans UF strävar vi efter att leverera bilvård med högsta kvalitet och noggrannhet.
+    Vi är ett ungt och engagerat företag från Eskilstuna som kombinerar entreprenörskap med en passion för bilar.
+    Vårt mål är att ge varje kund en professionell serviceupplevelse där bilen lämnas skinande ren och väl omhändertagen.
+    Vi lägger stor vikt vid detaljer och ser till att varje tvätt utförs med omsorg.
     Med oss får du mer än en ren bil – du får en känsla av ny bilglädje.</p>
   </div>
 </section>
+
 
 <section id="contact">
   <h2>Kontakta Oss</h2>
@@ -161,12 +178,11 @@
     <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
     <button type="submit" class="submit-btn">Skicka</button>
   </form>
-  <p style="text-align:center; margin-top:20px;">Telefon: 0729064482 | E-post: liyon.hanoosh@gmail.com</p>
 </section>
 
+
 <footer>
-  <img src="logo.png" alt="Eskilstuna Bilglans Logo">
-  <p>&copy; 2025 Eskilstuna Bilglans. Alla rättigheter reserverade.</p>
+  <p> 2025 Eskilstuna Bilglans.</p>
   <div class="footer-links">
     <a href="#services">Tjänster</a>
     <a href="#about">Om oss</a>
@@ -174,9 +190,11 @@
   </div>
 </footer>
 
+
 <script>
   const faders = document.querySelectorAll('.fade-up');
   const hero = document.getElementById('hero');
+
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -184,13 +202,18 @@
     });
   }, { threshold:0.2, rootMargin:"0px 0px -50px 0px" });
 
+
   faders.forEach(el => observer.observe(el));
+
 
   window.addEventListener('scroll', () => {
     hero.classList.toggle('scrolled', window.scrollY > 50);
   });
 </script>
 
+
 </body>
 </html>
+
+
 
